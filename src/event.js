@@ -1,55 +1,36 @@
-const event={
-    title: "Koncert zespołu X",
-    date: "2024-06-15",
-    location: "Warszawa",
+
+const drink={
+    name: "Napoj Orzeźwiający",
+    size: 500, //500ml
+    price: 3.2
 };
 
-console.log(event.title);
-console.log(event.date);
-console.log(event.location);
-console.log();
-
-//-----------------
-const participant={};
-participant.name="Karol";
-participant.email="xyz@123.com";
-
-console.log(participant.name);
-console.log(participant.email);
-console.log();
-//------------------
-
-const events=[
+const drinks_table=[
     {
-        title: "Koncert zespołu Y",
-        date: "2024-07-20",
-        location: "Kraków",
+        name: "Monster",
+        size: 500, //500ml
+        price: 4.99
     },
     {
-        title: "Festiwal Filmowy",
-        date: "2024-08-05",
-        location: "Gdańsk",
+        name: "Woda niegazowana",
+        size: 1000, //ml
+        price: 1.5
     },
     {
-        title: "Wystawa Sztuki",
-        date:  "2024-09-10",
-        location: "Wrocław",
+        name: "tymbark jablko-mieta",
+        size: 500, //500ml
+        price: 3.5
     }
-];
+]; console.log(drinks_table.length);
 
-events.push(
-    {
-        title: "Seminarium o JavaScript",
-        date: "2024-10-15",
-        location: "Łódź"
-    });
-console.log(events.length);
+function add_info(){
+    console.log();
+    console.log(drink.name);
+    console.log(drink.size);
+    console.log(drink.price);
+}
+add_info();
+
+drinks_table.push(drink);
 console.log();
-
-events.slice(3,4);
-events.shift();
-console.log(events.length);
-console.log(events);
-console.log();
-
-events.forEach(date => console.log("Daty: "+date.date));
+console.log(drinks_table);
